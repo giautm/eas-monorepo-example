@@ -14,10 +14,18 @@ on:
         description: EAS build profile (local/store)
         required: true
         default: local
+      os:
+        description: OS to build from (ubuntu/macos/windows)
+        required: true
+        default: ubuntu
+      debug:
+        description: Run in debug mode? (true/false)
+        required: false
+        default: false
 jobs:
   build:
     name: Install and build
-    runs-on: windows-latest
+    runs-on: ${{ github.event.inputs.os }}-latest
     steps:
       - name: Setup repo
         uses: actions/checkout@v1
@@ -43,6 +51,7 @@ jobs:
         env:
           EXPO_CREDENTIALS_EJECTED: ${{ secrets.EXPO_CREDENTIALS_EJECTED }}
           EXPO_CREDENTIALS_MANAGED: ${{ secrets.EXPO_CREDENTIALS_MANAGED }}
+          EXPO_DEBUG: ${{ github.event.inputs.debug }}
         with:
           script: |
             const fs = require('fs')
