@@ -20,8 +20,8 @@ on:
         default: ubuntu
       debug:
         description: Run in debug mode? (true/false)
-        required: false
-        default: false
+        required: true
+        default: 'false'
 jobs:
   build:
     name: Install and build
