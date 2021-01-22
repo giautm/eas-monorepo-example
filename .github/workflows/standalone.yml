@@ -17,7 +17,7 @@ on:
 jobs:
   build:
     name: Install and build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Setup repo
         uses: actions/checkout@v1
