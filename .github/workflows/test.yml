@@ -13,6 +13,8 @@ jobs:
       matrix:
         node: [10, 12, 14]
         os:
+          - macos-latest
+          - ubuntu-latest
           - windows-latest
     steps:
       - name: Setup repo
