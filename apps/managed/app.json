@@ -39,9 +39,9 @@
         {
           "file": "sentry-expo/upload-sourcemaps",
           "config": {
-            "organization": "myorg",
-            "project": "sentrytest",
-            "authToken": "myauthtoken"
+            "organization": "giautm",
+            "project": "sentry-expo",
+            "authToken": "a20a39f0fed2453eb5576ec7144960a4611017a973844b2087d3d2086b055120"
           }
         }
       ]
