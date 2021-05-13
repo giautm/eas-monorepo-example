@@ -12,6 +12,9 @@
     "apps/*",
     "packages/*"
   ],
+  "dependencies": {
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz"
+  },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "expo-yarn-workspaces": "~1.3.0"
