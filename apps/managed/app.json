@@ -2,7 +2,7 @@
   "expo": {
     "name": "eas-monorepo-app-managed",
     "slug": "eas-monorepo-app-managed",
-    "owner": "bycedric",
+    "owner": "viecco",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,7 +18,7 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.bycedric.easmonorepoexample.managed",
+      "bundleIdentifier": "co.viec.app.demo.sentry-expo",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
@@ -32,6 +32,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["sentry-expo"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "myorg",
+            "project": "sentrytest",
+            "authToken": "myauthtoken"
+          }
+        }
+      ]
     }
   }
 }
